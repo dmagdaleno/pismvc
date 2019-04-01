@@ -1,5 +1,7 @@
 package br.com.fiap.imposto.model;
 
+import br.com.fiap.imposto.util.AliquotaSingleton;
+
 import java.util.Observable;
 
 // O Model é um Observable
@@ -7,7 +9,7 @@ import java.util.Observable;
 // Ao implementar Imposto, teremos maior flexibilidade no Controller
 public class Pis extends Observable implements Imposto{
 
-    final float ALIQUOTA = 0.65f;
+    final float ALIQUOTA = Float.parseFloat(AliquotaSingleton.getInstance().getProperty("aliquotaPis"));
     float valorDoPis = 0;
 
     public Pis() {
