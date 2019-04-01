@@ -1,5 +1,6 @@
 .idea/
-out/
 lib/
+logs/
+out/
 
 pismvc.iml
